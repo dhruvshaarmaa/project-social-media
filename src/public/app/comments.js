@@ -3,7 +3,7 @@ function getPostbyId(id){
         for(let p of posts){
             $("#currentPost").append(`
             
-            <div class="col-4">
+            <div class="col">
             <div class="card ">
             <div id="postCard" class="card-body">
             <h5 class="card-title">${p.title}</h5>
