@@ -15,27 +15,3 @@
 #content{
     height: auto;
 }
-#titlePost{
-    width: 800px;
-    height: 50px;
-}
-#bodyComment{
-    width: 800px;
-    height: 100px;
-}
-#bodyPost{
-    width: 800px;
-    height: 250px;
-}
-#postCard{
-    width: 800px;
-    height: 250px;
-}
-#postComment{
-    width: px;
-    height: 100px;
-}
-#ulList{
-    width: 800px;
-    margin: 10px;
-}

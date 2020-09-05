@@ -4,7 +4,7 @@ function getPostbyId(id){
             $("#currentPost").append(`
             
             <div class="col-4">
-            <div class="card " style="width: 50rem;">
+            <div class="card ">
             <div id="postCard" class="card-body">
             <h5 class="card-title">${p.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${p.user.username}</h6>
