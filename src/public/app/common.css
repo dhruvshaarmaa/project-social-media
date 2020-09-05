@@ -5,7 +5,7 @@
 }
 #footer {
     position: sticky;
-    margin-top: 800px;
+    margin-top: auto;
     bottom: 0;
     width: 100%;
     padding-top: 0.5rem ;
@@ -14,4 +14,5 @@
 }
 #content{
     height: auto;
+    margin-bottom: 100px;
 }
