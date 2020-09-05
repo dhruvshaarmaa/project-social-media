@@ -11,17 +11,13 @@ async function createNewPost(userId,title,body){
 
 async function showAllPosts(query){
     //console.log("UserID:",query);
+    let where={};
     if(query){
-        const posts=await Posts.findAll({
-            where:{
-                userId: query
-            },
-            include:[Users]
-        });
-        return posts;
+        where.userId=query
     }
 
     const posts=await Posts.findAll({
+        where,
         include: [Users]
     });
     //arrays of objects having posts
