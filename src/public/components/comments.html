@@ -1,0 +1,40 @@
+<div class="container ">
+    <div class="h1 text-center">Post</div>
+
+    <div class="row " id="currentPost">
+        
+    </div>
+
+    <div class="row container " id="prevComments">
+        
+        <ul id="ulList" class="list-group">
+            <li class="list-group-item active">Comment Section</li>
+        </ul>
+
+    </div>
+
+    <div class="row " id="commentSection">
+        <form >
+            <div class="form-group ">
+                <label for="postComment">Comment</label>
+                <textarea type="text" class="form-control" id="bodyComment"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" id="btnPostComment">Post Comment</button>
+        </form>    
+    </div>
+
+</div>
+<script src="/app/comments.js"></script>
+<script>
+    getPostbyId(window.postId);
+    loadComments(window.postId);
+    
+</script>
+<script>
+    //on clicking call postComment()
+    console.log($("#btnPostComment"));
+    $("#btnPostComment").click(async function(){
+        await postComment(window.currentUser.id,window.postId, $("#bodyComment").val())
+        $("#bodyComment").val(null);
+    });
+</script>

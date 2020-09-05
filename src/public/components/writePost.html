@@ -1,0 +1,30 @@
+<div class="container my-2">
+    <div class="h1 text-center">Write a Post</div>
+    <div class="row" id="post-container">
+    <!--form ajax submission-->
+    <form >
+        <div class="form-group">
+          <label for="titlePost">Title</label>
+          <textarea type="text" class="form-control" id="titlePost"></textarea>
+          <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+        </div>
+        <div class="form-group">
+          <label for="bodyPost">Body</label>
+          <textarea type="text" class="form-control" id="bodyPost"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btnWritePost">Post</button>
+      </form>
+    </div>
+</div>
+<script src="/app/writePost.js"></script>
+<script>
+    //on clicking call writePost()
+    $("#btnWritePost").click(()=>{
+        let userId=window.currentUser.id;
+        //always take value of inputbox inside click Function
+        let title=$("#titlePost").val();
+        let body=$("#bodyPost").val();
+        writePost(userId, title, body);
+    });
+</script>
