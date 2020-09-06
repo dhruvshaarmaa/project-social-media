@@ -6,7 +6,7 @@ let db;
 if(process.env.NODE_ENV=="testing"){
     db=new Sequelize({
         dialect:"sqlite",
-        storage:":memory:"
+        storage:__dirname+"/../../test/test.db"
     });
 }else if(process.env.DATABASE_URL){
     db=new Sequelize(process.env.DATABASE_URL);
