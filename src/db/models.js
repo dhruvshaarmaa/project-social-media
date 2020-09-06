@@ -2,7 +2,13 @@
 const Sequelize=require("sequelize");
 //to use postgres db in my heroku
 let db;
-if(process.env.DATABASE_URL){
+
+if(process.env.NODE_ENV=="testing"){
+    db=new Sequelize({
+        dialect:"sqlite",
+        storage:__dirname+"/../../test/test.db"
+    });
+}else if(process.env.DATABASE_URL){
     db=new Sequelize(process.env.DATABASE_URL);
 }else{
     db=new Sequelize({
