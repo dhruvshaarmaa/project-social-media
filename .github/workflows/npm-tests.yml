@@ -44,10 +44,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-<<<<<<< HEAD:.github/workflows/npm-publish.yml
-=======
       - run: npm ci
       - run: npm publish    
->>>>>>> master:.github/workflows/npm-tests.yml
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
