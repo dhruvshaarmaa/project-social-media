@@ -15,8 +15,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm test
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests
+        run : npm run test 
+      - run: npm run cover
 
   publish-npm:
     needs: build
@@ -41,10 +44,5 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - name: Install Dependencies
-        run: npm install
-      - name: Run Tests
-        run : npm run test 
-      - run: npm run cover
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
