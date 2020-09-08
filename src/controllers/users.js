@@ -19,8 +19,11 @@ async function getUserbyUsername(username){
     });
 }
 async function getUserbyId(id){
+    //for zero and null
+    if(!id) throw new Error("User Id not provided");
+    //for string,boolean values
+    if(typeof(id)!="number") throw new Error("User Id should be an Integer");
 
-    if(NaN(id)) throw new Error("User Id should be an Integer");
     return await Users.findOne({
             where :{
                  id
