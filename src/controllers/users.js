@@ -20,7 +20,7 @@ async function getUserbyUsername(username){
 }
 async function getUserbyId(id){
 
-    //if(NaN(id)) throw new Error("User Id should be an Integer");
+    if(NaN(id)) throw new Error("User Id should be an Integer");
     return await Users.findOne({
             where :{
                  id
