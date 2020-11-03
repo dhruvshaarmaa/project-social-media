@@ -24,7 +24,6 @@ const COL_ID_DEF={
 }
 const COL_USERNAME_DEF={
     type:Sequelize.DataTypes.STRING(30),
-    unique:true,
     allowNull:false
 }
 const COL_TITLE_DEF={
